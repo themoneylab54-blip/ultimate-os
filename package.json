@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
-"scripts": {
-  "dev": "NODE_ENV=development tsx watch server/_core/index.ts",
-  "build": "vite build && mkdir -p server/_core/public && cp -r dist/public/* server/_core/public/",
-  "start": "NODE_ENV=production tsx server/_core/index.hostinger.ts",
-  "check": "tsc --noEmit",
-  "format": "prettier --write .",
-  "test": "vitest run",
-  "db:push": "drizzle-kit generate && drizzle-kit migrate"
-},
+  "scripts": {
+    "dev": "NODE_ENV=development tsx watch server/_core/index.ts",
+    "build": "vite build && mkdir -p server/_core/public && cp -r dist/public/* server/_core/public/",
+    "start": "NODE_ENV=production tsx server/_core/index.hostinger.ts",
+    "check": "tsc --noEmit",
+    "format": "prettier --write .",
+    "test": "vitest run",
+    "db:push": "drizzle-kit generate && drizzle-kit migrate"
+  },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.693.0",
     "@aws-sdk/s3-request-presigner": "^3.693.0",
@@ -80,10 +80,10 @@
     "tailwindcss-animate": "^1.0.7",
     "vaul": "^1.1.2",
     "wouter": "^3.3.5",
-    "zod": "^4.1.12"
+    "zod": "^4.1.12",
+    "tsx": "^4.19.1"
   },
   "devDependencies": {
-
     "@tailwindcss/typography": "^0.5.15",
     "@tailwindcss/vite": "^4.1.3",
     "@types/canvas-confetti": "^1.9.0",
@@ -101,7 +101,6 @@
     "postcss": "^8.4.47",
     "prettier": "^3.6.2",
     "tailwindcss": "^4.1.14",
-    "tsx": "^4.19.1",
     "tw-animate-css": "^1.4.0",
     "typescript": "5.9.3",
     "vite": "^5.0.0",
