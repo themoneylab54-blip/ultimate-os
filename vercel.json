@@ -2,6 +2,7 @@
   "version": 2,
   "buildCommand": "npm run build",
   "outputDirectory": "dist/public",
+  "public": true,
   "env": {
     "NODE_ENV": "production"
   },
