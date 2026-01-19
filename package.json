@@ -3,15 +3,15 @@
   "version": "1.0.0",
   "type": "module",
   "license": "MIT",
-  "scripts": {
-    "dev": "NODE_ENV=development tsx watch server/_core/index.ts",
-    "build": "vite build",
-    "start": "NODE_ENV=production node index.js",
-    "check": "tsc --noEmit",
-    "format": "prettier --write .",
-    "test": "vitest run",
-    "db:push": "drizzle-kit generate && drizzle-kit migrate"
-  },
+"scripts": {
+  "dev": "NODE_ENV=development tsx watch server/_core/index.ts",
+  "build": "vite build && mkdir -p server/_core/public && cp -r dist/public/* server/_core/public/",
+  "start": "NODE_ENV=production tsx server/_core/index.hostinger.ts",
+  "check": "tsc --noEmit",
+  "format": "prettier --write .",
+  "test": "vitest run",
+  "db:push": "drizzle-kit generate && drizzle-kit migrate"
+},
   "dependencies": {
     "@aws-sdk/client-s3": "^3.693.0",
     "@aws-sdk/s3-request-presigner": "^3.693.0",
